@@ -1,0 +1,67 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #222;
+    color: white;
+}
+
+html {
+    /* font-size: 50px;  */
+    /* means jahaa jaha bhi rem use karogoge va vaha jo default value 16px lag jayegi but hum html tag ke andar font-size ki madat se usko override bhi kar sakte hai */
+}
+
+/* .parent{
+    height: 400px;
+    width: 50%;
+    background-color: wheat;
+}
+
+.child{
+    height: 50%;
+    width: 50%;
+    background-color: red
+} */
+
+
+
+/* h1{
+    font-size: 2rem; /* 32px - in default case */
+/* font-size: 2rem; 100px - in current if font size is 50px case
+} */
+
+/* 1rem = 16px */
+
+/* .child{
+    font-size:50px;
+}
+
+h1{
+    font-size: 2em;
+     em depends on the parents font size 
+ } */
+
+
+ /* vh = viewport height
+ vw = viewport width
+ */
+
+ /* .parent{
+    height: 100vh;
+    width: 100vw;
+    background-color: darkslategrey;
+ } */
+
+ /* 
+ % --> depends on parent dimensions
+ rem --> depends on root [html] font size
+ em --> depends on parent font size
+ vh --> depends on viewport height
+ vw --> depends on viewport width
+ */
