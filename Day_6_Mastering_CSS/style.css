@@ -1,0 +1,57 @@
+/* button:active{
+    color: red;
+} */
+
+/* input:focus{
+    color: red;
+} */
+
+body{
+    perspective: 700px;
+}
+
+/* before the each list
+and content likha padta hai "" blank agar kuchh nahi
+*/
+/* li::before{
+    content: "👉";
+} */
+
+button{
+    background-color: darkolivegreen;
+    color: beige;
+    transition: all 0.2s ease-in;
+}
+
+button:hover{
+    background-color: darkslategrey;
+    color: red;
+}
+
+.box{
+    margin-top: 20px;
+    background-color: darkkhaki;
+    width: 100px;
+    height: 100px;
+    /* transition: all 0.2s ease-in;
+    /* transform: translate(100px, 100px); */
+    /* transform: rotate(20deg);
+    transform: scale(1.5);
+    transform: skew(20deg,50deg);
+    transform: translate3d(30px, 30px, 80px); */
+    animation: anime 2s cubic-bezier(0.075, 0.82, 0.165, 1) 1s infinite alternate;
+}
+
+/* .box:hover{
+    background-color: darkolivegreen;
+    transform: scale(1);
+} */
+
+@keyframes anime {
+    from{
+        background-color: darkolivegreen;
+    }
+    to{
+        background-color: darkkhaki;
+    }
+}
