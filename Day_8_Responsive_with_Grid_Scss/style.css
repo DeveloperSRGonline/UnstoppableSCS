@@ -1,0 +1,100 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.images {
+    display: grid;
+    width: 100%;
+    gap: 10px;
+    background-color: darkkhaki;
+    grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f"
+        "g"
+        "h"
+        "i"
+        "j"
+    ;
+}
+
+@media (min-width: 1024px) {
+    .images {
+        grid-template-areas:
+            "a a"
+            "a a"
+            "b c"
+            "d e"
+            "j j"
+            "j j"
+            "f g"
+            "h i";
+    }
+}
+
+@media (min-width: 1400px) {
+    .images {
+        grid-template-areas:
+            "a a b c"
+            "a a d e"
+            "f g j j"
+            "h i j j";
+    }
+}
+
+.image-a {
+    grid-area: a;
+}
+
+.image-b {
+    grid-area: b;
+}
+
+.image-c {
+    grid-area: c;
+}
+
+.image-d {
+    grid-area: d;
+}
+
+.image-e {
+    grid-area: e;
+}
+
+.image-f {
+    grid-area: f;
+}
+
+.image-g {
+    grid-area: g;
+}
+
+.image-h {
+    grid-area: h;
+}
+
+.image-i {
+    grid-area: i;
+}
+
+.image-j {
+    grid-area: j;
+}
