@@ -31,6 +31,8 @@ main {
     width: 100%;
 }
 
+// section 1
+
 // as mobile first approch first styled for mobile
 .view-1 {
     display: flex;
@@ -58,6 +60,66 @@ main {
     }
 }
 
+// section 2
+.view-2 {
+    width: 100%;
+    padding: 4rem 3rem;
+    display: flex;
+    justify-content: center;
+
+    .marquee {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        &::after {
+            content: "";
+            height: 100%;
+            width: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(to right, #0e0e0e, transparent);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        &::before {
+            content: "";
+            height: 100%;
+            width: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-image: linear-gradient(to left, #0e0e0e, transparent);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .text {
+            display: flex;
+            gap: 3rem;
+            padding: 0 1.5rem;
+            animation: marquee 10s linear infinite both;
+
+            p {
+                font-size: 2rem;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 // then for dextop view created media query
 @media (min-width: 1024px) {
     html {
@@ -77,6 +139,15 @@ main {
         }
         p {
             width: 20%;
+        }
+    }
+
+    .view-2{
+        padding: 4rem 5rem;
+
+        .marquee{
+            width: 50%;
+
         }
     }
 }

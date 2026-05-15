@@ -46,6 +46,59 @@ main {
   margin: 0.9rem 0;
 }
 
+.view-2 {
+  width: 100%;
+  padding: 4rem 3rem;
+  display: flex;
+  justify-content: center;
+}
+.view-2 .marquee {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.view-2 .marquee::after {
+  content: "";
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #0e0e0e, transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+.view-2 .marquee::before {
+  content: "";
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(to left, #0e0e0e, transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+.view-2 .marquee .text {
+  display: flex;
+  gap: 3rem;
+  padding: 0 1.5rem;
+  animation: marquee 10s linear infinite both;
+}
+.view-2 .marquee .text p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 @media (min-width: 1024px) {
   html {
     font-size: clamp(16px, 1vw, 20px);
@@ -58,5 +111,11 @@ main {
   }
   .view-1 p {
     width: 20%;
+  }
+  .view-2 {
+    padding: 4rem 5rem;
+  }
+  .view-2 .marquee {
+    width: 50%;
   }
 }/*# sourceMappingURL=style.css.map */
