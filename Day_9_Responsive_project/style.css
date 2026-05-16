@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -48,7 +49,7 @@ main {
 
 .view-2 {
   width: 100%;
-  padding: 4rem 3rem;
+  padding: 3rem 3rem;
   display: flex;
   justify-content: center;
 }
@@ -91,6 +92,134 @@ main {
   font-weight: 300;
 }
 
+.view-3 {
+  width: 100%;
+  padding: 4rem 2rem;
+}
+.view-3 .about {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.view-3 .about .ab {
+  background-color: #181716;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(57, 51, 41);
+}
+.view-3 .about .ab h2 {
+  font-weight: 400;
+}
+.view-3 .about .ab h3 {
+  font-weight: 100;
+}
+.view-3 .about .ab p {
+  margin: 1rem 0;
+  font-weight: 100;
+  opacity: 0.8;
+}
+.view-3 .about .ab a {
+  text-decoration: none;
+  color: wheat;
+}
+
+.view-4 {
+  width: 100%;
+  padding: 5rem 0.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.view-4::before {
+  content: "Selected Work";
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #d8c6aa;
+  margin-bottom: 1.1rem;
+}
+.view-4 .work {
+  width: 100%;
+  max-width: 28rem;
+  display: grid;
+  gap: 1rem;
+  position: relative;
+  padding-top: 3.6rem;
+}
+.view-4 .work::before {
+  content: "↗";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 3.6rem);
+  width: 2rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(216, 198, 170, 0.28);
+  border-radius: 50%;
+  color: #d8c6aa;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.view-4 .work::after {
+  content: "SEE ALL";
+  position: absolute;
+  top: 0.45rem;
+  left: calc(50% - 0.6rem);
+  color: #d8c6aa;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+.view-4 .work .w {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1.33;
+  min-height: 0;
+  border: 1px solid rgb(57, 51, 41);
+  background-color: #12100d;
+}
+.view-4 .work .w .card-image {
+  width: 100%;
+  height: 100%;
+}
+.view-4 .work .w .card-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  filter: brightness(0.72) contrast(1.05);
+}
+.view-4 .work .w .card-content {
+  position: absolute;
+  bottom: 0.95rem;
+  left: 0.95rem;
+  right: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  background-color: rgba(37, 31, 24, 0.263);
+  border: 1px solid rgba(126, 111, 88, 0.35);
+  backdrop-filter: blur(10px);
+}
+.view-4 .work .w .card-content h2 {
+  font-size: 1.35rem;
+  font-weight: 300;
+  color: #d8c6aa;
+}
+.view-4 .work .w .card-content p {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #d8c6aa;
+  white-space: nowrap;
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -117,5 +246,25 @@ main {
   }
   .view-2 .marquee {
     width: 50%;
+  }
+  .view-3 {
+    display: flex;
+    justify-content: center;
+  }
+  .view-3 .about {
+    flex-direction: row;
+    width: 80%;
+  }
+  .view-4 {
+    padding: 5rem 5rem;
+  }
+  .view-4 .work {
+    width: 80%;
+    max-width: 72rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  .view-4 .work .w {
+    aspect-ratio: 1.35;
   }
 }/*# sourceMappingURL=style.css.map */
